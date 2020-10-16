@@ -1,0 +1,58 @@
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { 
+    Splash, 
+    Booking, 
+    Chat, 
+    ChatList, 
+    Home, 
+    Login, 
+    Profile, 
+    Service 
+} from '../page';
+import BottomNavigator from './BottomNavigator';
+
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const MainApp = () => {
+    return (
+        <Tab.Navigator
+        tabBar={props => <BottomNavigator {...props}/>}
+        >
+            <Tab.Screen name="Home" component={Home}/>
+            <Tab.Screen name="Chat" component={Chat}/>
+            <Tab.Screen name="Booking" component ={Booking}/>
+            <Tab.Screen name="Profile" component={Profile}/>
+        </Tab.Navigator>
+    )
+}
+
+
+
+const Router = () => {
+    return (
+       <Stack.Navigator
+       initialRouteName="MainApp"
+       screenOptions ={{
+           headerShown: false,
+
+       }}
+       >
+       <Stack.Screen name="Splash" component={Splash}/>
+       <Stack.Screen name="Booking" component={Booking}/>
+       <Stack.Screen name="Chat" component={Chat} />
+       <Stack.Screen name="ChatList" component={ChatList}/>
+       <Stack.Screen name="MainApp" component={MainApp}/>
+       <Stack.Screen name="Login" component={Login} />
+       <Stack.Screen name="Profile" component={Profile}/>
+       <Stack.Screen name="Service" component={Service}/>
+       </Stack.Navigator>
+    )
+}
+
+export default Router
+
+const styles = StyleSheet.create({})
