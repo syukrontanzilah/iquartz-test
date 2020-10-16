@@ -23,7 +23,7 @@ const MainApp = () => {
         tabBar={props => <BottomNavigator {...props}/>}
         >
             <Tab.Screen name="Home" component={Home}/>
-            <Tab.Screen name="Chat" component={Chat}/>
+            <Tab.Screen name="ChatList" component={ChatList}/>
             <Tab.Screen name="Booking" component ={Booking}/>
             <Tab.Screen name="Profile" component={Profile}/>
         </Tab.Navigator>
@@ -41,13 +41,10 @@ const Router = () => {
 
        }}
        >
-       <Stack.Screen name="Splash" component={Splash}/>
-       <Stack.Screen name="Booking" component={Booking}/>
-       <Stack.Screen name="Chat" component={Chat} />
-       <Stack.Screen name="ChatList" component={ChatList}/>
-       <Stack.Screen name="MainApp" component={MainApp}/>
        <Stack.Screen name="Login" component={Login} />
-       <Stack.Screen name="Profile" component={Profile}/>
+       <Stack.Screen name="Splash" component={Splash}/>
+       <Stack.Screen name="Chat" component={Chat} />
+       <Stack.Screen name="MainApp" component={MainApp}/>
        <Stack.Screen name="Service" component={Service}/>
        </Stack.Navigator>
     )

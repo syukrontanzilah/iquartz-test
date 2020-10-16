@@ -3,7 +3,7 @@ import Booking from './Booking';
 import Chat from './Chat';
 import ChatList from './ChatList';
 import Home from './Home';
-import Login from './Home';
+import Login from './Login';
 import Profile from './Profile';
 import Service from './Service';
 

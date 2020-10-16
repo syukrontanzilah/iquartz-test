@@ -1,13 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import { Fonts } from '../utils/Fonts'
 import { IconChat, IconChatActive } from '../assets'
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View>
-            <IconChatActive/>
-            <Text style={{fontFamily: Fonts.regular, fontSize:20}}>Home page nih yah</Text>
+            <Text>home page</Text>
+            <Text>Login</Text>
+            <Button title="Login"onPress={()=> navigation.navigate("Login")}/>
         </View>
     )
 }
