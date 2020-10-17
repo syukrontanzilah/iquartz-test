@@ -17,13 +17,13 @@ const ListTech = ({onPress}) => {
 
             <View style={styles.information}>
                 <View style={{flexDirection:'row', alignItems:'center'}}>
-                <Text style={styles.name}>Name, Distance</Text>
+                <Text style={styles.name}>Name, Distance </Text>
                 <View style={styles.star}>
-                    <Ionicons name="heart"/>
-                    <Ionicons name="heart"/>
-                    <Ionicons name="heart"/>
-                    <Ionicons name="heart"/>
-                    <Ionicons name="heart"/>
+                    <Ionicons name="star" color="#474747"/>
+                    <Ionicons name="star" color="#474747"/>
+                    <Ionicons name="star" color="#474747"/>
+                    <Ionicons name="star" color="#474747"/>
+                    <Ionicons name="star-half" color="#474747"/>
                 </View>
                 </View>
                 <Text style={styles.desc}>Type of Service</Text>
@@ -34,7 +34,7 @@ const ListTech = ({onPress}) => {
             </View>
 
             <View style={styles.iconRight}>
-                <Ionicons name="heart"/>
+                <Ionicons name="information-circle" size={18}/>
             </View>
 
         </TouchableOpacity>
@@ -75,7 +75,8 @@ const styles = StyleSheet.create({
     },
     name: {
         fontFamily: Fonts.regular,
-        fontSize:16
+        fontSize:16,
+        color: '#474747'
     },
     desc: {
         fontFamily: Fonts.regular,

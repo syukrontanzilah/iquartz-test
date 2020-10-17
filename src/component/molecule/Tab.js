@@ -9,19 +9,18 @@ const Tab = () => {
     return (
         <View style={styles.container}>
            <TouchableOpacity activeOpacity={0.5} style={styles.tab}>
-               <Ionicons color="white" name="heart"/>
-            <Text style={styles.title}>Service</Text>
+            <Text style={styles.title}>All Service</Text>
            </TouchableOpacity>
            <TouchableOpacity activeOpacity={0.5} style={styles.tab}>
-           <Ionicons color="white" name="heart"/>
+           <Ionicons color="white" name="snow"/>
             <Text style={styles.title}>Air Con</Text>
            </TouchableOpacity>
            <TouchableOpacity activeOpacity={0.5} style={styles.tab}>
-           <Ionicons color="white" name="heart"/>
+           <Ionicons color="white" name="water"/>
             <Text style={styles.title}>Plumbing</Text>
            </TouchableOpacity>
            <TouchableOpacity activeOpacity={0.5} style={styles.tab}>
-           <Ionicons color="white" name="heart"/>
+           <Ionicons color="white" name="logo-electron"/>
             <Text style={styles.title}>Electrical</Text>
            </TouchableOpacity>
         </View>

@@ -15,22 +15,18 @@ const Home = ({navigation}) => {
         <Map/>
         <Tab/>
 
-<View style={styles.list}>
-    <ListTech
-    onPress={()=> navigation.navigate("Service")}
-    />
-    <ListTech/>
-    <ListTech/>
-    <ListTech/>
-    <ListTech/>
-    <ListTech/>
-
-</View>
-
-
-            <Button title="Login"onPress={()=> navigation.navigate("Login")}/>
+        <View style={styles.list}>
+            <ListTech
+            onPress={()=> navigation.navigate("Service")}
+            />
+            <ListTech/>
+            <ListTech/>
+            <ListTech/>
+            <ListTech/>
+            <ListTech/>
+        </View>
+            {/* <Button title="Login"onPress={()=> navigation.navigate("Login")}/> */}
         </ScrollView>
-            
         </View>
     )
 }

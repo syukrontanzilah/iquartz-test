@@ -77,10 +77,10 @@ const Service = ({}) => {
 
 <View style={styles.bottomTab}>
     <View style={styles.tab}>
-    <Text style={styles.label}>online</Text>
+    <Text style={styles.label}>Online</Text>
     </View>
     <View style={styles.tab}>
-    <Text style={styles.label}>offline</Text>
+    <Text style={styles.label}>Offline</Text>
     </View><View style={styles.tab}>
     <Text style={styles.labelActive}>Job in Progress</Text>
     </View>
