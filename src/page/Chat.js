@@ -27,18 +27,18 @@ const Chat = ({navigation}) => {
                 </ScrollView>
 
                 <View style={styles.footer}>
-<TouchableOpacity style={styles.button}>
-    <Ionicons name="add" size={35} color="gray"/>
-</TouchableOpacity>
-<View style={styles.inputWrap}>
-<TextInput
-placeholder="Text here ..."
-style={styles.input}/>
+                <TouchableOpacity style={styles.button}>
+                    <Ionicons name="add" size={35} color="gray"/>
+                </TouchableOpacity>
+                <View style={styles.inputWrap}>
+                <TextInput
+                placeholder="Text here ..."
+                style={styles.input}/>
 
-</View>
-<TouchableOpacity style={styles.button}>
-    <Ionicons name="send" size={30} color="gray"/>
-</TouchableOpacity>
+                </View>
+                <TouchableOpacity style={styles.button}>
+                    <Ionicons name="send" size={30} color="gray"/>
+                </TouchableOpacity>
 
                 </View>
             </View>

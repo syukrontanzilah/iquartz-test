@@ -18,17 +18,17 @@ const Map = () => {
            </View>
        </View>
             <View style={styles.iconWrap}>
-             <Ionicons name="home"/>
+             <Ionicons name="expand" size={25} color="gray"/>
             </View>
             </View>
             
         <View style={styles.bottomInfo}>
             <TouchableOpacity activeOpacity={0.8} style={styles.iconWrap}>
-        <Ionicons name="add"/>
+        <Ionicons name="add" size={25} color="gray"/>
             </TouchableOpacity>  
             <Gap height={0}/>
             <TouchableOpacity activeOpacity={0.8}  style={styles.iconWrap}>
-            <Ionicons name="add"/>
+            <Ionicons name="remove" size={25} color="gray"/>
             </TouchableOpacity>
         </View>
      
