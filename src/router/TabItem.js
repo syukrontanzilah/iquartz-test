@@ -8,27 +8,21 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
         if(title === 'Home'){
             return active ? <IconHomeActive/> : 
            <IconHome/>
-           
         }
         if (title === 'ChatList'){
             return active ? <IconChatActive/> : 
            <IconChat/>
-           
         }
         if (title === 'Booking'){
             return active ? <IconListActive/> : 
           <IconList/>
-           
         }
         if (title === 'Profile'){
             return active ? <IconProfileActive/> : 
-          <IconProfile/>
-           
+          <IconProfile/> 
         }
-
         return < IconHome />
     }
-
 
     return (
         <TouchableOpacity style={styles.container} onPress={onPress} onLongPress ={onLongPress}>

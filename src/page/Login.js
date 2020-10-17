@@ -4,7 +4,7 @@ import {Input, Gap, Button} from '../component'
 import { colors, Fonts } from '../utils'
 import { ImgLogo } from '../assets'
 
-const Login = () => {
+const Login = ({navigation}) => {
     return (
         <ScrollView 
         showsVerticalScrollIndicator={false}
@@ -20,30 +20,29 @@ const Login = () => {
             <Input placeholder="Password"/>
             <Text style={styles.forgot}>Forgot your Password ?</Text>
             <Gap height={10}/>
-            <Button title="Login"/>
+            <Button
+            onPress={()=> navigation.navigate('MainApp')}
+            title="Login"/>
             </View>
 
             <Gap height={40}/>
            
             <View>
             <Input placeholder="Email"/>
-            <Gap height={8}/>
+            <Gap height={10}/>
 
             <Input placeholder="username"/>
-            <Gap height={8}/>
+            <Gap height={10}/>
 
             <Input placeholder="Password"/>
-            <Gap height={8}/>
+            <Gap height={10}/>
 
             <Input placeholder="Phone Number"/>
             <Gap height={20}/>
 
             <Button title="Create"/>
             <Gap height={20}/>
-
             </View>
-         
-
         </ScrollView>
     )
 }
