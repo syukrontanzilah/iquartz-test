@@ -1,7 +1,16 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { Fonts, colors,} from '../utils'
-import { IconHomeActive, IconHome, IconChat, IconChatActive, IconListActive, IconList, IconProfileActive, IconProfile } from '../assets'
+import { 
+    IconHomeActive, 
+    IconHome, 
+    IconChat, 
+    IconChatActive, 
+    IconListActive, 
+    IconList, 
+    IconProfileActive, 
+    IconProfile 
+} from '../assets'
 
 const TabItem = ({title, active, onPress, onLongPress}) => {
     const Icon = () => {
@@ -23,7 +32,6 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
         }
         return < IconHome />
     }
-
     return (
         <TouchableOpacity style={styles.container} onPress={onPress} onLongPress ={onLongPress}>
        <Icon/> 

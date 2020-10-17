@@ -1,20 +1,23 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import { ImgPerson } from '../../assets';
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Fonts } from '../../utils';
 
-const ListTech = ({onPress}) => {
+const ListTech = (props) => {
+    const navigation = useNavigation()
     return (
         <TouchableOpacity
-        onPress={onPress}
-        activeOpacity={0.8} style={styles.container}>
+        onPress={()=> navigation.navigate("Service")}
+        activeOpacity={0.8} style={[styles.container, {
+            borderLeftColor: props.color,
+        }]}>
             <View style={styles.left}>
               <View style={styles.avatar}>
                 <Image style={styles.photo} source={ImgPerson}/>
               </View>
             </View>
-
             <View style={styles.information}>
                 <View style={{flexDirection:'row', alignItems:'center'}}>
                 <Text style={styles.name}>Name, Distance </Text>
@@ -28,15 +31,12 @@ const ListTech = ({onPress}) => {
                 </View>
                 <Text style={styles.desc}>Type of Service</Text>
             </View>
-
             <View style={styles.right}>
                 <Text style={styles.price}>$/Free</Text>
             </View>
-
             <View style={styles.iconRight}>
-                <Ionicons name="information-circle" size={18}/>
+                <Ionicons name="information-circle" size={18} color='#474747'/>
             </View>
-
         </TouchableOpacity>
     )
 }
@@ -48,9 +48,8 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         backgroundColor:'white',
         padding:5,
-        borderLeftColor: 'red',
         borderLeftWidth:10,
-        marginBottom: 5
+        marginBottom: 5,
     },
     left:{
        paddingHorizontal:10

@@ -16,7 +16,6 @@ const Data = ({label, desc}) => {
         </View>
     </View>
     )
-   
 }
 
 const Profile = () => {
@@ -36,35 +35,28 @@ const Profile = () => {
                 label="User ID"
                 desc="WKI"
                 />
-
                 <Data 
                 label="Name"
                 desc="Ahmad Furqon"
                 />  
-
                 <Data
                 label="Password"
                 desc="*********"
                 />
-
                 <Data
                 label="Phone"
                 desc="08123456789"
                 />
-
                 <Data
                 label="Email"
                 desc="furqon@gmail.com"
                 />
-
                 <Data
                 label="Adress"
                 desc ="Jl.Pos Pengumben No. 56, Jakarta Barat"
                 />
-
                 </View>
 
-               
                     <TouchableOpacity style={styles.edit}>
                         <Ionicons name="pencil" size={20} color="white"/>
                     </TouchableOpacity>

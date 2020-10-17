@@ -40,12 +40,11 @@ const [chat] = useState([
                     name={chats.name}
                     avatar={chats.url}
                     date={chats.date}
-                    onPress = {()=> navigation.navigate('Chat')}
+                    onPress = {()=> navigation.navigate('Chat', chats)}
                     />
                 })
             }
             </ScrollView>
-           
         </View>
     )
 }

@@ -1,7 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import Router from './router/Router';
 
 

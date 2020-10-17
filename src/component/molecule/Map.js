@@ -21,7 +21,6 @@ const Map = () => {
              <Ionicons name="expand" size={25} color="gray"/>
             </View>
             </View>
-            
         <View style={styles.bottomInfo}>
             <TouchableOpacity activeOpacity={0.8} style={styles.iconWrap}>
         <Ionicons name="add" size={25} color="gray"/>
@@ -31,11 +30,10 @@ const Map = () => {
             <Ionicons name="remove" size={25} color="gray"/>
             </TouchableOpacity>
         </View>
-     
-     <View style={styles.googleWrap}>
-<Image style={styles.google} source={ImgGoogle}/>
-     </View>
-        </ImageBackground>
+        <View style={styles.googleWrap}>
+    <Image style={styles.google} source={ImgGoogle}/>
+        </View>
+            </ImageBackground>
     )
 }
 
@@ -69,7 +67,6 @@ const styles = StyleSheet.create({
     mapSearch:{
         fontFamily: Fonts.bold,
         fontSize: 18,
-
     },
     satelite:{
         fontFamily: Fonts.regular,

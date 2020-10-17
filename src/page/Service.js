@@ -8,19 +8,18 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 const List = () => {
     return (
         <View style={styles.list}>
-<Text style={styles.desc}>Good work! No mess</Text>
-<View style={styles.right}>
-        <Ionicons name="star" color="gray" />
-        <Ionicons name="star" color="gray"/>
-        <Ionicons name="star" color="gray"/>
-        <Ionicons name="star" color="gray"/>
-        <Ionicons name="star-half" color="gray"/>
-        </View>
-        <Text style={styles.sender}>3 days ago - Hamidah Alfi</Text>
+            <Text style={styles.desc}>Good work! No mess</Text>
+            <View style={styles.right}>
+            <Ionicons name="star" color="gray" />
+            <Ionicons name="star" color="gray"/>
+            <Ionicons name="star" color="gray"/>
+            <Ionicons name="star" color="gray"/>
+            <Ionicons name="star-half" color="gray"/>
+            </View>
+             <Text style={styles.sender}>3 days ago - Hamidah Alfi</Text>
         </View>
     )
 }
-
 
 const Service = ({}) => {
     return (
@@ -36,57 +35,53 @@ const Service = ({}) => {
                 <Text style={styles.type}>Type of service: Professional Mecanical Engineering</Text>
                 <Text style={styles.address}>
                 Transport Allowence: $0
-            Labour Cost: $0/hr
-            Tools & Parts: Negotiable
+                Labour Cost: $0/hr
+                Tools & Parts: Negotiable
                 </Text>
             <Gap height={20}/>
             <Button title="book now"/>
-        </View>
-
-        <View style={styles.right}>
-        <Ionicons name="star" color="yellow"/>
-        <Ionicons name="star" color="yellow"/>
-        <Ionicons name="star" color="yellow"/>
-        <Ionicons name="star" color="yellow"/>
-        <Ionicons name="star-half" color="yellow"/>
-        </View>
             </View>
 
-        <View style={styles.ratingAndReview}>
+            <View style={styles.right}>
+            <Ionicons name="star" color="yellow"/>
+            <Ionicons name="star" color="yellow"/>
+            <Ionicons name="star" color="yellow"/>
+            <Ionicons name="star" color="yellow"/>
+            <Ionicons name="star-half" color="yellow"/>
+            </View>
+                </View>
+
+            <View style={styles.ratingAndReview}>
             <View style={{justifyContent:'space-between', flexDirection:'row'}}>
             <Text style={styles.titleHead}>Rating & Reviews</Text>
             <Text style={styles.seeAll}>See All</Text>
             </View>
 
-            <View style={{flexDirection:'row', alignItems:'flex-end',}}>
+                <View style={{flexDirection:'row', alignItems:'flex-end',}}>
                 <Text style={styles.numbRating}>4.2</Text>
                 <Text style={styles.desc}> Out of 5 Total: 627 Ratings</Text>
-            </View>
-
-<Gap height={20}/>
-            <View>
+                </View>
+                <Gap height={20}/>
+                <View>
                 <List/>
                 <List/>
                 <List/>
-            </View>
+                </View>
+                </View>
+        </ScrollView>
 
-        </View>
-
-
-</ScrollView>
-
-<View style={styles.bottomTab}>
-    <View style={styles.tab}>
-    <Text style={styles.label}>Online</Text>
-    </View>
-    <View style={styles.tab}>
-    <Text style={styles.label}>Offline</Text>
-    </View><View style={styles.tab}>
-    <Text style={styles.labelActive}>Job in Progress</Text>
-    </View>
-</View>
-           
-        </View>
+            <View style={styles.bottomTab}>
+                <TouchableOpacity style={styles.tab}>
+                <Text style={styles.label}>Online</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.tab}>
+                <Text style={styles.label}>Offline</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.tab}>
+                <Text style={styles.labelActive}>Job in Progress</Text>
+                </TouchableOpacity>
+            </View>    
+                    </View>
     )
 }
 
@@ -170,14 +165,15 @@ const styles = StyleSheet.create({
     },
     bottomTab:{
         backgroundColor: colors.blue,
-        justifyContent:'space-between',
+        // justifyContent:'space-between',
         flexDirection:'row',
         height:50,
-        paddingHorizontal:25
+        // paddingHorizontal:25
     },
     tab:{
         alignItems:'center',
         justifyContent:'center',
+        flex:1
     },
     label:{
         color:'white',

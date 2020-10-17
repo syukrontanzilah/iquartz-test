@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import { StyleSheet, Text, View, TextInput } from 'react-native'
-import { colors, Fonts } from '../../utils'
+import React, { useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
+import { colors, Fonts } from '../../utils';
 
 const Input = ({label, value, onChangeText, secureTextEntry, disable, placeholder }) => {
     const [border, setBorder] = useState(colors.lightgray);

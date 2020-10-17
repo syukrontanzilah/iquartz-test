@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { colors, Fonts } from '../../utils'
 
 const Button = ({title, onPress}) => {
@@ -8,7 +8,7 @@ const Button = ({title, onPress}) => {
        onPress={onPress}
        activeOpacity={0.7}
        style={styles.container}>
-<Text style={styles.title}>{title}</Text>
+        <Text style={styles.title}>{title}</Text>
        </TouchableOpacity>
     )
 }
@@ -30,3 +30,4 @@ const styles = StyleSheet.create({
         textTransform:'uppercase'
     }
 })
+

@@ -1,8 +1,6 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, ScrollView, Image } from 'react-native'
-import { Fonts } from '../utils/Fonts'
-import { IconChat, IconChatActive } from '../assets'
-import {Header, Map, Tab, ListTech} from '../component'
+import { ScrollView, StyleSheet, View } from 'react-native'
+import { Header, ListTech, Map, Tab } from '../component'
 import { colors } from '../utils'
 
 const Home = ({navigation}) => {
@@ -14,18 +12,13 @@ const Home = ({navigation}) => {
         >
         <Map/>
         <Tab/>
-
         <View style={styles.list}>
-            <ListTech
-            onPress={()=> navigation.navigate("Service")}
-            />
-            <ListTech/>
-            <ListTech/>
-            <ListTech/>
-            <ListTech/>
+            <ListTech color="red"/>
+            <ListTech color={colors.blue}/>
+            <ListTech color={colors.yellow}/>
+            <ListTech color="red"/>
             <ListTech/>
         </View>
-            {/* <Button title="Login"onPress={()=> navigation.navigate("Login")}/> */}
         </ScrollView>
         </View>
     )

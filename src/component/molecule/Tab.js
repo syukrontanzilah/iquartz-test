@@ -3,8 +3,6 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { Fonts } from '../../utils';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-
-
 const Tab = () => {
     return (
         <View style={styles.container}>

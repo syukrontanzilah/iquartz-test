@@ -1,20 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import { ImgPerson3 } from '../../assets'
-import { Fonts, colors } from '../../utils'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { colors, Fonts } from '../../utils'
 
 const ListChat = ({avatar, name, date, onPress}) => {
     return (
         <TouchableOpacity
-        onPress={onPress}
-        activeOpacity={0.8}
-        style={styles.container}>
+            onPress={onPress}
+            activeOpacity={0.8}
+            style={styles.container}>
             <Image source={avatar} style={styles.avatar}/>
             <View style={styles.contactWrap}>
-    <Text style={styles.name}>{name}</Text>
+            <Text style={styles.name}>{name}</Text>
             <Text style={styles.desc}>1 Hours ago</Text>
             </View>
-    <Text style={styles.desc}>{date}</Text>
+            <Text style={styles.desc}>{date}</Text>
         </TouchableOpacity>
     )
 }

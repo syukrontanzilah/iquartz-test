@@ -16,6 +16,11 @@ import BottomNavigator from './BottomNavigator';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const forFade = ({ current }) => ({
+    cardStyle: {
+        opacity: current.progress,
+    },
+})
 
 const MainApp = () => {
     return (
@@ -30,15 +35,13 @@ const MainApp = () => {
     )
 }
 
-
-
 const Router = () => {
     return (
        <Stack.Navigator
-       initialRouteName="MainApp"
+       initialRouteName="Splash"
        screenOptions ={{
            headerShown: false,
-
+           cardStyleInterpolator: forFade
        }}
        >
        <Stack.Screen name="Login" component={Login} />

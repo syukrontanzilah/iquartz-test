@@ -21,26 +21,37 @@ const Login = ({navigation}) => {
             <Text style={styles.forgot}>Forgot your Password ?</Text>
             <Gap height={10}/>
             <Button
-            onPress={()=> navigation.navigate('MainApp')}
+            onPress={()=> navigation.replace('MainApp')}
             title="Login"/>
             </View>
+            {/* <Gap height={40}/> */}
 
-            <Gap height={40}/>
+            <View style={{
+                flexDirection:'row', 
+                paddingTop:20, 
+                paddingBottom:25}}>
+                <View style={styles.line}/>
+                <Text style={{
+                    paddingHorizontal:20, 
+                    fontSize:18, 
+                    color:'gray', 
+                    marginBottom:-5
+                    }}>Or</Text>
+                <View style={styles.line}/>
+            </View>
            
             <View>
             <Input placeholder="Email"/>
             <Gap height={10}/>
-
             <Input placeholder="username"/>
             <Gap height={10}/>
-
             <Input placeholder="Password"/>
             <Gap height={10}/>
-
             <Input placeholder="Phone Number"/>
             <Gap height={20}/>
-
-            <Button title="Create"/>
+            <Button
+            onPress={()=> navigation.replace('MainApp')}
+            title="Create"/>
             <Gap height={20}/>
             </View>
         </ScrollView>
@@ -54,7 +65,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.black,
         paddingHorizontal:30,
         flex:1
-
     },
     wrapLogo:{
         width:80,
@@ -63,7 +73,6 @@ const styles = StyleSheet.create({
         alignItems:'center',
         marginBottom:40,
         marginTop:20
-
     },
     logo:{
         width: 70,
@@ -78,5 +87,10 @@ const styles = StyleSheet.create({
         color:colors.lightgray,
         fontFamily: Fonts.regular,
         marginTop:5
+    },
+    line:{
+        flex:1, 
+        borderBottomColor:'gray', 
+        borderBottomWidth:1
     }
 })

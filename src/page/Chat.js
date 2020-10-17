@@ -1,13 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, TextInput, TouchableWithoutFeedback } from 'react-native'
 import { colors, Fonts } from '../utils'
 import { Header } from '../component';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { ImgPerson3 } from '../assets';
 
-const Chat = ({navigation}) => {
+const Chat = ({navigation, route}) => {
+    const data = route.params
     return (
-        <View style={styles.chat}>
+        <TouchableWithoutFeedback
+        onPress={() => { Keyboard.dismiss() }}
+        >
+            <View  style={styles.chat}>
             <Header/>
             <View style={styles.chatContent}>
                 <View style={styles.header}>
@@ -16,33 +20,31 @@ const Chat = ({navigation}) => {
                     >
                     <Ionicons name="chevron-back-outline" size={35} color="gray"/>
                     </TouchableOpacity>
-                    <Image style={styles.avatar} source={ImgPerson3}/>
+                    <Image style={styles.avatar} source={data.url}/>
                     <View>
-                        <Text style={styles.name}>Revalina s temat</Text>
+                        <Text style={styles.name}>{data.name}</Text>
                         <Text style={styles.online}>Online</Text>
                     </View>
                 </View>
                 <ScrollView style={styles.chatArea}>
 
                 </ScrollView>
-
                 <View style={styles.footer}>
                 <TouchableOpacity style={styles.button}>
                     <Ionicons name="add" size={35} color="gray"/>
                 </TouchableOpacity>
                 <View style={styles.inputWrap}>
                 <TextInput
-                placeholder="Text here ..."
+                placeholder={`Text to ${data.name}`}
                 style={styles.input}/>
-
                 </View>
                 <TouchableOpacity style={styles.button}>
                     <Ionicons name="send" size={30} color="gray"/>
                 </TouchableOpacity>
-
                 </View>
             </View>
-        </View>
+            </View>
+        </TouchableWithoutFeedback>
     )
 }
 

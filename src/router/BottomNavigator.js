@@ -4,7 +4,6 @@ import TabItem from './TabItem'
 import { colors } from '../utils'
 
 const BottomNavigator = ({state, descriptors, navigation}) => {
-
     return (
           <View style={styles.container}>
         {state.routes.map((route, index) => {
@@ -59,7 +58,5 @@ const styles = StyleSheet.create({
         paddingHorizontal:'5%',
         paddingVertical:18,
         backgroundColor: colors.black
-
-
     }
 })

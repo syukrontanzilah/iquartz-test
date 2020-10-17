@@ -22,11 +22,9 @@ const Booking = () => {
             <Text style={styles.tabText}>Job Completed</Text>
             </TouchableOpacity>
             </View>
-
             <View style={{backgroundColor: '#474747'}}>
                 <Text style={styles.tabText}>All Bookings</Text>
             </View>
-
             <ScrollView 
             showsVerticalScrollIndicator={false}
             style={styles.scroll}>
@@ -37,8 +35,7 @@ const Booking = () => {
             <ListBooking/>
             <ListBooking/>
             <ListBooking/>
-
-<Gap height={20}/>
+            <Gap height={20}/>
             </ScrollView>
         </View>
     )
